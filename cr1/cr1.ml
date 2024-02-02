@@ -38,11 +38,6 @@ Exhaustive Cases :
 1) Don't include first element in the subset -> subset_sum t target 
 
 2) Include the head element in the subset -> subset_sum t (target - h) 
-
-
-
-
-
 *)
 
 
