@@ -7,4 +7,4 @@ the CS51 Textbook *Programming Well* by Stuart Shieber, [OCaml's 99 Famous Probl
 CS 3110 textbook *OCaml Programming: Correct + Efficient + Beautiful*. 
 
 If you have any questions or spot any corrections to be made to the problem, 
-email me (jpersonnat@college.harvard.edu) or create a GitHub Issue. 
+email me (gersonpersonnat@college.harvard.edu) or create a GitHub Issue. 
