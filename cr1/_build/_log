@@ -1,73 +1,16 @@
 ### Starting build.
 # Target: cr1_tests.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:cr1_tests.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
-ocamlfind ocamldep -package graphics -package CS51Utils -modules cr1_tests.ml > cr1_tests.ml.depends # cached
+ocamlfind ocamldep -package graphics -package CS51Utils -modules cr1_tests.ml > cr1_tests.ml.depends
 # Target: cr1.mli.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:mli, file:cr1.mli, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
-ocamlfind ocamldep -package graphics -package CS51Utils -modules cr1.mli > cr1.mli.depends
+ocamlfind ocamldep -package graphics -package CS51Utils -modules cr1.mli > cr1.mli.depends # cached
 # Target: cr1.cmi, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:mli, file:cr1.mli, interf, ocaml, quiet, strict-sequence, thread, traverse, use_str }
-ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o cr1.cmi cr1.mli
+ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o cr1.cmi cr1.mli # cached
 # Target: cr1_tests.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:cr1_tests.cmo, file:cr1_tests.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o cr1_tests.cmo cr1_tests.ml
 # Target: cr1.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:cr1.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamldep -package graphics -package CS51Utils -modules cr1.ml > cr1.ml.depends # cached
 # Target: cr1.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:cr1.cmo, file:cr1.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
-ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o cr1.cmo cr1.ml
-+ ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o cr1.cmo cr1.ml
-File "cr1.ml", line 6, characters 4-9:
-6 | let (+/.) x y = failwith "not yet implemented" ;; 
-        ^^^^^
-Warning 32 [unused-value-declaration]: unused value +/..
-File "cr1.ml", line 6, characters 10-11:
-6 | let (+/.) x y = failwith "not yet implemented" ;; 
-              ^
-Warning 27 [unused-var-strict]: unused variable x.
-File "cr1.ml", line 6, characters 12-13:
-6 | let (+/.) x y = failwith "not yet implemented" ;; 
-                ^
-Warning 27 [unused-var-strict]: unused variable y.
-File "cr1.ml", line 12, characters 8-9:
-12 | let fib n = failwith "not yet implemented" ;; 
-             ^
-Warning 27 [unused-var-strict]: unused variable n.
-File "cr1.ml", line 17, characters 15-18:
-17 | let subset_sum lst target = failwith "not yet implemented" ;; 
-                    ^^^
-Warning 27 [unused-var-strict]: unused variable lst.
-File "cr1.ml", line 17, characters 19-25:
-17 | let subset_sum lst target = failwith "not yet implemented" ;; 
-                        ^^^^^^
-Warning 27 [unused-var-strict]: unused variable target.
-File "cr1.ml", line 23, characters 14-18:
-23 | let partition pred lst = failwith "not yet implemented" ;; 
-                   ^^^^
-Warning 27 [unused-var-strict]: unused variable pred.
-File "cr1.ml", line 23, characters 19-22:
-23 | let partition pred lst = failwith "not yet implemented" ;; 
-                        ^^^
-Warning 27 [unused-var-strict]: unused variable lst.
-File "cr1.ml", line 28, characters 9-12:
-28 | let pack lst = failwith "not yet implemented" ;; 
-              ^^^
-Warning 27 [unused-var-strict]: unused variable lst.
-File "cr1.ml", line 51, characters 19-22:
-51 | let count_position pos lst = failwith "not yet implemented" ;; 
-                        ^^^
-Warning 27 [unused-var-strict]: unused variable pos.
-File "cr1.ml", line 51, characters 23-26:
-51 | let count_position pos lst = failwith "not yet implemented" ;; 
-                            ^^^
-Warning 27 [unused-var-strict]: unused variable lst.
-File "cr1.ml", line 58, characters 23-31:
-58 | let legal_knight_moves position = failwith "not yet implemented" ;; 
-                            ^^^^^^^^
-Warning 27 [unused-var-strict]: unused variable position.
-File "cr1.ml", line 65, characters 21-22:
-65 | let min_knight_steps s t = failwith "not yet implemented" ;; 
-                          ^
-Warning 27 [unused-var-strict]: unused variable s.
-File "cr1.ml", line 65, characters 23-24:
-65 | let min_knight_steps s t = failwith "not yet implemented" ;; 
-                            ^
-Warning 27 [unused-var-strict]: unused variable t.
+ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o cr1.cmo cr1.ml # cached
 # Target: cr1_tests.byte, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, dont_link_with, extension:byte, file:cr1_tests.byte, link, ocaml, program, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamlc -linkpkg str.cma -thread -package graphics -package CS51Utils cr1.cmo cr1_tests.cmo -o cr1_tests.byte
 # Compilation successful.
