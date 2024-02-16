@@ -1,0 +1,120 @@
+commit 34826765b5e4dc01f14a24744ac7359d85b11155
+Merge: 2286a49 d966d56
+Author: gpersonnat <gersonpersonnat@college.harvard.edu>
+Date:   Fri Feb 9 08:34:20 2024 -0500
+
+    pushed code review 2 materials:
+
+commit d966d56a4fa0d8639c4e07c8613498bbd0a3b525
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Fri Feb 9 08:18:34 2024 -0500
+
+    add cr2
+
+commit 2286a495f09c66d49a921e3f59d1322ad14fb450
+Author: gpersonnat <gersonpersonnat@college.harvard.edu>
+Date:   Sat Feb 3 00:21:10 2024 -0500
+
+    adjusted solution explanations
+
+commit d408c860f057086dc799c77bfab36a5b1170a775
+Author: gpersonnat <gersonpersonnat@college.harvard.edu>
+Date:   Sat Feb 3 00:15:05 2024 -0500
+
+    resolved typo in solutions
+
+commit da2ae6195e52bb355c85a8ea5e57bd6719fc6514
+Author: gpersonnat <gersonpersonnat@college.harvard.edu>
+Date:   Sat Feb 3 00:14:46 2024 -0500
+
+    resolved typo in solutions
+
+commit f7afa0b5229a99273a34be282f1e10967ce0d7dc
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Fri Feb 2 17:12:00 2024 -0500
+
+    post solutions for code review 1
+
+commit e1476c89a800116ff9a0f8cbff9393ccedab3e15
+Author: gpersonnat <89941578+gpersonnat@users.noreply.github.com>
+Date:   Fri Feb 2 15:20:34 2024 -0500
+
+    Update README.md
+
+commit 54c21ee1e97b079dcaf1ac2ea4beb700113f9ee4
+Author: gpersonnat <gersonpersonnat@college.harvard.edu>
+Date:   Fri Feb 2 13:47:44 2024 -0500
+
+    cleaned up typos in solutions
+
+commit 940b21d8dd97d3a7cfef0c52f3ea60c0e1afa2ca
+Author: gpersonnat <gersonpersonnat@college.harvard.edu>
+Date:   Fri Feb 2 12:37:34 2024 -0500
+
+    added solutions and live code review notes
+
+commit 68c3284746a3ccfd90511c9b243662c30e00ee49
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Fri Feb 2 11:11:16 2024 -0500
+
+    hide .byte files
+
+commit 713c2386ff1f8d9a5d853fc2bbbb3b30952637b3
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Fri Feb 2 11:10:14 2024 -0500
+
+    hide byte files
+
+commit 400de0e8990198a1690a2384764b48b59e7fa678
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Fri Feb 2 11:08:29 2024 -0500
+
+    ignore files with extension .byte
+
+commit e7d2598bac3c4014927ed9348100fb6d8dab6216
+Author: Jayden Personnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Fri Feb 2 11:06:47 2024 -0500
+
+    Delete .DS_Store
+
+commit e1b6c14bcd2bf4af4d021ad752deafe4b8be7384
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Fri Feb 2 11:06:24 2024 -0500
+
+    hide .DS_Store
+
+commit 17b108582a88e7729cb1e41b9475b61b71e11e16
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Wed Jan 31 19:04:42 2024 -0500
+
+    add code review pdf
+
+commit 29b7f9314a49960cf76a6821277271b1b44ea814
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Tue Jan 30 19:57:15 2024 -0500
+
+    add mli file
+
+commit 23fd8eca000869c8867d8bcabd5a2ca4faa00359
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Tue Jan 30 19:42:26 2024 -0500
+
+    fix function naming
+
+commit 54af9be89d3843cac53e3908aeef3bfb27ef14b2
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Tue Jan 30 19:38:32 2024 -0500
+
+    add cr1 material
+
+commit c8ac3cacf20e1fc98c67a7c3452426d0b160101c
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Tue Jan 30 18:55:24 2024 -0500
+
+    populate readme
+
+commit d6cd053aa090cf0b3d333f7775418c85e0af164e
+Author: jaydenpersonnat <89941534+jaydenpersonnat@users.noreply.github.com>
+Date:   Tue Jan 30 18:24:41 2024 -0500
+
+    initial commit

@@ -5,7 +5,7 @@ list. Write a non-recursive solution. You may use List.sort. You may also assume
 have the function to_run_length (from problem set 1)
 *)
 
-let to_run_length (lst : 'a list) : int * 'a list = 
+let to_run_length (lst : 'a list) : (int * 'a) list = 
   failwith "not yet implemented" ;; 
 
 let remove_duplicates _ = failwith "not yet implemented" ;; 
@@ -38,7 +38,8 @@ functions and returns the composition of those functions. For example, suppose w
 had a list of functions [ f ; g; h]. compose should return the function f ◦ g ◦ h
 or ℓ(x) = f (g(h(x))
 *)
-let compose _ = failwith "not yet implemented" ;; 
+let compose (flst : ('a -> 'a) list) : 'a -> 'a = 
+  List.fold_right (fun x acc -> fun y -> x (acc y)) flst (fun x -> x)  ;; 
 
 
 (* Option and Exception Conversion *)
@@ -51,7 +52,24 @@ opt_to_ext. If the input function returns Some v on an argument, the output func
 should return v for that argument.
 *)
 
-let opt_to_ext _ = failwith "not yet implemented" ;; 
+let opt_to_ext (f : ('a -> 'b option)) (ex : exn) : ('a -> 'b)  = 
+   fun x -> 
+    match f x with 
+    | None -> raise ex 
+    | Some v -> v 
+  ;; 
+
+(* 
+How to define new exceptions 
+exception Timeout ;; 
+
+exception UnboundVariable of string ;;
+
+raise (UnboundVariable "x")
+
+
+
+*)
 
 (* 
 Write a function ext_to_opt : (’a -> ’b) -> (’a -> ’b option) that converts
@@ -61,6 +79,29 @@ return None. If the input function returns a value v for an input, the output fu
 return Some v.
 *)
 
-let ext_to_opt = failwith "not yet implemented" ;; 
+let ext_to_opt (f : 'a -> 'b) : ('a -> 'b option) = 
+  fun x -> 
+    try 
+      Some (f x) 
+    with 
+    | _ -> None 
+  ;; 
+
+
+let div_opt (x : int) (y : int) : int option = 
+  try 
+    Some (x / y) 
+  with 
+  Division_by_zero -> None 
+  | _ -> Some 0 ;;
+
+(*
+
+match with case1 
+
+match with case1 | match case2 | match case3 
+
+*)
+  
 
 
