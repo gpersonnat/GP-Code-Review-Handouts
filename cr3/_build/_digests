@@ -1,0 +1,8 @@
+"Rule: ocaml: cmo* -> byte (%=cr3_tests )": "&-\239k !=-\1631R\"\246\188\134\206"
+"Rule: ocaml: cmo* -> byte (%=cr3 )": "c\201\201\175\200\247\205\194\197\177\0153+z\155;"
+"Rule: ocaml: ml -> cmo & cmi (%=cr3_tests )": "\170}\022\148\005r\174\140B\\T\164\020{5\246"
+"Rule: ocaml dependencies ml (%=cr3_tests )": "\145\169\211\208\128\162Mk\193\212,\175\186\224\160\024"
+"Resource: /Users/jaydenpersonnat/code-review-2024/cr3/cr3_tests.ml": "\232N}V\023\189`p\254\129|\188*\b/\133"
+"Rule: ocaml dependencies ml (%=cr3 )": "\027\255L\141\250`\172\131\022M\218Y\247\145\229s"
+"Rule: ocaml: ml -> cmo & cmi (%=cr3 )": "(\217ts\202l#u\212f\247A\189\196&\224"
+"Resource: /Users/jaydenpersonnat/code-review-2024/cr3/cr3.ml": "k=\185\240TS\022R=\156\186\233|\174\181\179"
