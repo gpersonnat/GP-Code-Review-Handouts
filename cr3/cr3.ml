@@ -70,6 +70,9 @@ folder *)
 
 (* Define a function list_all that prints the name of all the files (each on a new line) contained
 in a given fileObj (including those in all subfolders) *)
-let list_all _ = failwith "not yet implemented" ;; 
+let rec list_all (f : fileObj) : unit =
+  match f with
+  | File filename -> Printf.printf "%s\n" filename
+  | Folder(folder_name, objects) -> List.iter list_all objects ;;
 
 

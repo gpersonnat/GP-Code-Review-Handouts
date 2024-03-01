@@ -13,7 +13,6 @@ let pop_helper (stk : 'a stack) : 'a * 'a stack =
   | [] -> raise EmptyStack
   | hd :: tl -> hd, tl 
 
-
 let top (stk : 'a stack) : 'a = 
   stk |> pop_helper |> fst 
 

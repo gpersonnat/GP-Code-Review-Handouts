@@ -81,6 +81,14 @@ function to compare elements, and a function to convert each of the elements int
 *)
 
 
+module type ORDERED_TYPE = 
+  sig 
+    type t  
+    val compare : t -> t -> int 
+    val serialize : t -> string
+  end
+
+
 (*
 2. Create a module type for Set that includes the following values and operations on sets are
 supportable.
@@ -94,6 +102,22 @@ the set as a pair : (h, t), where h is the extract element and t are the rest of
 (g) print_set : convert a set into a string.
 *)
 
+module type SET = 
+  sig 
+    exception EmptySet 
+    type element 
+    type set 
+    val empty : set 
+    val add : element -> set -> set
+    val take: set -> element * set 
+    val mem : element -> set -> bool 
+    val union : set -> set -> set 
+    val intersection : set -> set -> set
+    val print_set : set -> string 
+
+  end 
+
+
 
 
 (*
@@ -101,6 +125,48 @@ the set as a pair : (h, t), where h is the extract element and t are the rest of
 type SET
 *)
 
+module MakeSet (Element : ORDERED_TYPE) : (SET with type element = Element.t) = 
+  struct 
+
+    exception EmptySet 
+
+    type element = Element.t 
+
+    type set = element list 
+
+    let empty : set = [] 
+
+    let mem : element -> set -> bool = 
+      List.mem 
+
+    let add (e : element) (s : set) : set = 
+      if mem e s then s 
+      else e :: s  
+
+    let take (s : set) : element * set = 
+      match s with 
+      | [] -> raise EmptySet 
+      | h :: t -> h, t 
+
+      let union (s1 : set) (s2 : set) : set = 
+        List.fold_right add s2 s1
+        
+
+      let intersection (s1 : set) (s2 : set) : set = 
+          List.filter  (fun x -> mem x s1)  s2
+
+
+      let print_set (s : set) : string = 
+          let rec aux (str : set) : string = 
+            match str with 
+            | [] -> "" 
+            | [e] -> Element.serialize e
+            | h :: t -> Element.serialize h ^ "; " ^ aux t 
+          in "{" ^ aux s ^ "}"
+
+
+
+  end
 
 
 (*
@@ -111,6 +177,52 @@ type SET
 (d) A set of integer sets
 *)
 
+module IntSet : SET with type element = int = MakeSet(struct
+                                                type t = int 
+                                                let compare = Stdlib.compare 
+                                                let serialize = string_of_int  
+                                                  end)
+
+module StringSet : SET with type element = string = MakeSet(struct
+                                                    type t = string 
+                                                    let compare = String.compare 
+                                                    let serialize x = x 
+                                                      end)
+
+(* Convert a list to a string *)
+let string_of_list (convert : 'a -> string) (lst : 'a list) : string = 
+  let rec aux (l : 'a list) : string = 
+    match l with 
+    | [] -> ""
+    | [e] -> convert e 
+    | h :: t -> convert h ^ "; " ^ aux t 
+  in aux lst ;;
+
+(* [2; 5; 7] 
+
+convert 2 ^ " ; " ^ aux [5; 7] = 2; 5; 7
+
+
+*)
+
+module IntListSet : SET with type element = int list = 
+    MakeSet(struct 
+        type t = int list 
+        let compare = List.compare Stdlib.compare 
+        let serialize = string_of_list string_of_int        
+      end)                                                   
+                                                
+
+module IntSetSet : SET with type element = IntSet.set = 
+      MakeSet(
+        struct 
+          type t = IntSet.set 
+          let compare : IntSet.set -> IntSet.set -> int = 
+            Stdlib.compare 
+          let serialize : IntSet.set -> string = 
+            IntSet.print_set 
+        end
+      )
 
 (*
 5. Define a function power_set that returns a set of all the subsets of the original set. For this
@@ -121,3 +233,58 @@ the power set of {1, 2, 3, 4} is
 {3, 4}, {1, 2, 3}, {1, 3, 4}, {1, 2, 4}, {2, 3, 4}, {1, 2, 3,
 4}}
 *)
+
+(* 
+
+
+{2, 4} 
+
+
+power_set {4} -> {{}; {4}}
+
+
+power_set {2, 4} -> {{}; {2}; {4}; {2; 4}}
+
+
+add 2 to each set of power_set {4} -> {{2}; {2; 4}} U (power_set {4})
+
+2 added to {{}} -> {{2}}
+*)
+
+(* add_el 2 {} -> {2} *)
+
+
+(* 
+
+
+add_el 1 {{2; 5}; {3; 4; 5}; {1}} -> {{{2; 5;1}; {3; 4; 5; 1}; {1}}}
+
+add_el 1 {{}} -> {{1}}
+
+
+first = {2; 5}; 
+
+rest = {{3; 4; 5}; {1}} -> add_el e rest -> {{3; 4; 5; 1}; {1}}}
+
+
+
+*)
+
+(* Adds an element to each set in a set of sets  *)
+let rec add_el (e : int) (set_set : IntSetSet.set) : IntSetSet.set = 
+  if set_set = IntSetSet.empty then 
+  IntSetSet.empty |> IntSetSet.add (IntSet.add e IntSet.empty) 
+  else 
+  let first, rest = IntSetSet.take set_set in 
+  add_el e rest |> IntSetSet.add (IntSet.add e first) 
+
+(* arg |> func *)
+
+
+(* power_set {} -> {{}} *)
+let rec power_set (s : IntSet.set) : IntSetSet.set = 
+  if s = IntSet.empty then IntSetSet.add (IntSet.empty) (IntSetSet.empty) 
+  else 
+  let h, t = IntSet.take s in 
+  let power_t = power_set t in 
+  IntSetSet.union power_t (add_el h (power_t))
