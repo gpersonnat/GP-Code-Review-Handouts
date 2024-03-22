@@ -1,16 +1,31 @@
 ### Starting build.
+<<<<<<< HEAD
 # Target: cr4.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:cr4.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamldep -package graphics -package CS51Utils -modules cr4.ml > cr4.ml.depends
+=======
+# Target: cr4_soln.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:cr4_soln.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamldep -package graphics -package CS51Utils -modules cr4_soln.ml > cr4_soln.ml.depends # cached
+>>>>>>> upstream/main
 # Target: stack.mli.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:mli, file:stack.mli, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamldep -package graphics -package CS51Utils -modules stack.mli > stack.mli.depends # cached
 # Target: stack.cmi, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:mli, file:stack.mli, interf, ocaml, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o stack.cmi stack.mli # cached
+<<<<<<< HEAD
 # Target: cr4.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:cr4.cmo, file:cr4.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o cr4.cmo cr4.ml
+=======
+# Target: cr4_soln.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:cr4_soln.cmo, file:cr4_soln.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o cr4_soln.cmo cr4_soln.ml # cached
+>>>>>>> upstream/main
 # Target: stack.ml.depends, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), extension:ml, file:stack.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamldep -package graphics -package CS51Utils -modules stack.ml > stack.ml.depends # cached
 # Target: stack.cmo, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:stack.cmo, file:stack.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamlc -c -thread -strict-sequence -package graphics -package CS51Utils -w A-4-33-40-41-42-43-34-44 -o stack.cmo stack.ml # cached
+<<<<<<< HEAD
 # Target: cr4.byte, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, dont_link_with, extension:byte, file:cr4.byte, link, ocaml, program, quiet, strict-sequence, thread, traverse, use_str }
 ocamlfind ocamlc -linkpkg str.cma -thread -package graphics -package CS51Utils stack.cmo cr4.cmo -o cr4.byte
+=======
+# Target: cr4_soln.byte, tags: { package(CS51Utils), package(graphics), warn(A-4-33-40-41-42-43-34-44), byte, dont_link_with, extension:byte, file:cr4_soln.byte, link, ocaml, program, quiet, strict-sequence, thread, traverse, use_str }
+ocamlfind ocamlc -linkpkg str.cma -thread -package graphics -package CS51Utils stack.cmo cr4_soln.cmo -o cr4_soln.byte # cached
+>>>>>>> upstream/main
 # Compilation successful.

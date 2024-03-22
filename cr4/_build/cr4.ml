@@ -28,8 +28,11 @@ let invert_stack (s : 'a stack) : 'a stack =
 *)
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> upstream/main
 (*.................
 
 Set Module 
@@ -62,8 +65,11 @@ the set as a pair : (h, t), where h is the extract element and t are the rest of
 
 *)
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> upstream/main
 (* 
 
 2) Implement a Set Module of that satisfies the SET interface
@@ -71,18 +77,27 @@ the set as a pair : (h, t), where h is the extract element and t are the rest of
 *)
 
 
+<<<<<<< HEAD
 
 (* 
 
 3) OUTSIDE the Set module, define three higher order functions that operate over 
+=======
+(* 
+
+3) OUTSIDE the Set module, define three high order functions that operate over 
+>>>>>>> upstream/main
 sets; map, fold, and filter
  
 *)
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> upstream/main
 (* 
 
 Define a function power_set that returns a set of all the subsets of the original set. For this
