@@ -44,13 +44,13 @@ let infinite_delay _ = failwith "" ;;
 
 (* 
 
-Define a function \texttt{compute : ('a -> 'a list) -> 'a list -> unit -> 'a} 
+Define a function compute : ('a -> 'a list) -> 'a list -> unit -> 'a
 that takes in lists of computations and returns a function that 
 repeatedly returns the next computation each time the function is called. 
 For example, if we have a function 
-list \texttt{[f; g; h]} and \texttt{[x; y; z]}, 
+list [f; g; h] and [x; y; z], 
 then the function returned from compute should 
-return \texttt{f x}, then \texttt{g y}, then \texttt{h z}, \texttt{f x}, and so on. 
+return f x, then g y, then h z, f x, and so on. 
 *)
 
 let compute _ = failwith "" ;; 
