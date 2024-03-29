@@ -41,6 +41,22 @@ should only be computed once *)
 
 let infinite_delay _ = failwith "" ;; 
 
+
+(* 
+
+Define a function \texttt{compute : ('a -> 'a list) -> 'a list -> unit -> 'a} 
+that takes in lists of computations and returns a function that 
+repeatedly returns the next computation each time the function is called. 
+For example, if we have a function 
+list \texttt{[f; g; h]} and \texttt{[x; y; z]}, 
+then the function returned from compute should 
+return \texttt{f x}, then \texttt{g y}, then \texttt{h z}, \texttt{f x}, and so on. 
+*)
+
+let compute _ = failwith "" ;; 
+
+
+
 (* Define an ’a tree type for infinite trees. Each node in the tree can have any number of
 children *)
 
