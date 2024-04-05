@@ -30,13 +30,7 @@ class counter : counter_interface =
       method bump n = state <- state + n
       method get_state = state
    end ;;
- class loud_counter : counter_interface =
-   object (this)
-      inherit counter as super
-      method! bump n =
-      super#bump n;
-      Printf.printf "State is now %d\n" this#get_state
-   end ;;
+ 
 
 
 (* Problem 2 *)
