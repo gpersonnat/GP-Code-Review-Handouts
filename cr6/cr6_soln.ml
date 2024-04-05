@@ -17,19 +17,15 @@ let mem_factorial =
 
 (* Define a function that generates the Fibonacci numbers (i.e. fib(i) the ith time the function
 is called *)
-let fib = 
-  let n = ref 0 in 
+let fib : unit -> int = 
   let first = ref 1 in 
   let second = ref 1 in 
   fun () : int -> 
-    if 
-      !n = 0 || !n = 1 then ((n := succ !n); 1)
-    else 
-      let num = !first + !second in 
-        n := succ !n; 
-        first := !second; 
-        second := num; 
-        num  ;; 
+    let ret = !first in 
+    let num = !first + !second in 
+    first := !second; 
+    second := num; 
+    ret     ;;
 
 
 (* Rewrite power from Part 2 (see Problem 6) to improve the worst-case time complexity. 
